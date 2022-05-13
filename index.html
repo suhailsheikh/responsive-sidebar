@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="main.js"></script>
+    <title>Responsive Sidebar Menu</title>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <span class="nav-brand">Dashboard</span>
+                <div id="menu" onClick="toggleMenu(this)">
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                    <span class="bars"></span>
+                </div>
+            </div>
+            <ul class="nav-list">
+                <li>
+                    <a href="#">
+                        <i class="material-icons">home</i>
+                        <span class="nav-text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">redeem</i>
+                        <span class="nav-text">Redeem</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="material-icons">rocket_launch</i>
+                        <span class="nav-text">Product Launch</span>
+                    </a>
+                </li>
+                <li class="settings">
+                    <a href="#">
+                        <i class="material-icons">settings</i>
+                        <span class="nav-text">Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <section class="content">
+            <h1>Responsive Sidebar</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem tenetur dolores quas possimus iusto, ab iure quibusdam eos fugit consequuntur facere! Ut illo vel, dolorem reprehenderit ea veniam velit quia.</p>
+        </section>
+    </div>
+</body>
+</html>

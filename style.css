@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --dark-color: #11101D;
+    --light-color: #F6F5FF;
+    --primary-color: #695CFE;
+    --text-color: #707070;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    flex: 1 1 0;
+}
+
+.sidebar {
+    width: 72px;
+    height: 100vh;
+    transition: 0.4s all ease;
+    background: var(--dark-color);
+}
+
+.sidebar-header {
+    display: flex;
+    padding: 1rem;
+    margin-left: 0.5rem;
+    color: var(--light-color);
+    height: 50px; /* Set the height here to prevent icons from jumping! */
+}
+
+.sidebar ul {
+    margin: 0.5rem;
+}
+
+.sidebar ul li a {
+    padding: 1rem;
+    display: flex;
+    text-decoration: none;
+    color: var(--light-color);
+}
+
+.sidebar ul li a:hover {
+    background: var(--primary-color);
+    transition: 0.4s all ease;
+    border-radius: 5px;
+    color: white;
+}
+
+.sidebar.active {
+    width: 240px;
+}
+
+.nav-text {
+    left: 70px;
+    opacity: 0;
+    position: fixed;
+}
+
+.nav-text.active {
+    opacity: 1;
+}
+
+.nav-brand {
+    display: none;
+}
+
+.nav-brand.active {
+    width: 100%;
+    display: inline-block;
+}
+
+.content {
+    padding: 1rem;
+}
+
+/* Hamburger menu */
+#menu {
+    cursor: pointer;
+}
+
+.bars {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 2px;
+    background-color: var(--light-color);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.change .bars:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 4px);
+}
+  
+.change .bars:nth-child(2) {
+    opacity: 0;
+}
+  
+.change .bars:nth-child(3) {
+    transform: rotate(45deg) translate(-4px, -4px);
+}
+
+/* Mobile view */
+@media (max-width: 1024px) {
+
+    .sidebar.active {
+        position: fixed;
+        z-index: 99;
+    }
+}
